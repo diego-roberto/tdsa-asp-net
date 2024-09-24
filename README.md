@@ -1,18 +1,19 @@
 # Projeto CRUD de Clientes com ASP.NET Core Razor Pages, C#, MySQL e Docker
 
-Este projeto é um simples sistema para gerenciar clientes, um CRUD (Criar, Ler, Atualizar, Deletar), desenvolvido utilizando ASP.NET Core Razor Pages e MySQL, com as tabelas sendo gerenciadas pelo Entity Framework Core e o banco de dados rodando dentro de um container Docker.
+Este projeto é um simples sistema para gerenciar clientes, um CRUD (Criar, Ler, Atualizar, Deletar), desenvolvido utilizando ASP.NET Core Razor Pages, Bootstrap e MySQL, com as tabelas sendo gerenciadas pelo Entity Framework Core e o banco de dados rodando dentro de um container Docker.
 
-</br>
+<h3>
 <img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
 <img src="https://img.shields.io/badge/EntityFrameworkCore-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
 <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
 <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"/>
 <img src="https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white"/>
+</h3>
 
 </br>
 <p align="center">
-  <img width="500" height="400" src="/ClientesApp/Assets/form.png">
+  <img width="800" height="400" src="/ClientesApp/Assets/form.png">
 </p>
 
 # Passos para Rodar:
@@ -66,5 +67,5 @@ CLI_DATANASCIMENTO (date) </br>
 CLI_ATIVO (bit)
 
 <p align="center">
-  <img width="500" height="400" src="/ClientesApp/Assets/table_clientes.png">
+  <img width="600" height="300" src="/ClientesApp/Assets/table_clientes.png">
 </p>
