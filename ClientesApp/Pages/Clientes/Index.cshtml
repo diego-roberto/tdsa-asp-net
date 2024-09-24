@@ -1,0 +1,55 @@
+@page
+@model ClientesApp.Pages.Clientes.IndexModel
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<h2>Clientes</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Cliente.Id" />
+    <div>
+        <label asp-for="Cliente.Nome"></label>
+        <input asp-for="Cliente.Nome" />
+        <span asp-validation-for="Cliente.Nome" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Cliente.DataNascimento"></label>
+        <input asp-for="Cliente.DataNascimento" type="date" />
+        <span asp-validation-for="Cliente.DataNascimento" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Cliente.Ativo"></label>
+        <input asp-for="Cliente.Ativo" type="checkbox" />
+    </div>
+    <button type="submit">Salvar</button>
+</form>
+
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Data de Nascimento</th>
+            <th>Ativo</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model.Clientes)
+        {
+            <tr>
+                <td>@cliente.Nome</td>
+                <td>@cliente.DataNascimento.ToShortDateString()</td>
+                <td>@(cliente.Ativo ? "Sim" : "Não")</td>
+                <td>
+                    <a asp-page="Index" asp-route-id="@cliente.Id">Editar</a> |
+                    <a asp-page-handler="Delete" asp-route-id="@cliente.Id" onclick="return confirm('Tem certeza que deseja excluir este cliente?');">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<partial name="_ValidationScriptsPartial" />
